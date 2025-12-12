@@ -67,6 +67,7 @@ class RoyalTribunal:
 
             # Decode
             raw_text = self.tokenizer.batch_decode(outputs)[0]
+            print(raw_text)
             # Parse out just the response (simple string splitting)
             response_text = raw_text.split("### Response:")[-1].strip()
             response_text = response_text.replace("<|end_of_text|>", "")
@@ -106,7 +107,7 @@ if __name__ == "__main__":
     # # FastLanguageModel.from_pretrained() loads the fine-tuned model with LoRA adapters
     model, tokenizer = FastLanguageModel.from_pretrained(
         # Relative path to the saved LoRA model directory
-        model_name="./notebooks/lora_model",
+        model_name="./notebooks/lora_model_v3",
         # Maximum tokens the model can process in one sequence
         max_seq_length=max_seq_length,
         # Data type for model weights (auto-detected based on hardware capabilities)

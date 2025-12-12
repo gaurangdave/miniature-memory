@@ -166,7 +166,7 @@ def main():
     if len(sys.argv) > 1:
         file_path = Path(sys.argv[1])
     else:
-        file_path = Path("/home/gaurangdave/workspace/llm_tuning/data/royal_dataset_cleaned.jsonl")
+        file_path = Path("/home/gaurangdave/workspace/llm_tuning/data/royal_dataset.jsonl")
     
     print("Validating JSONL file...")
     is_valid, errors, stats = validate_jsonl_file(file_path)
